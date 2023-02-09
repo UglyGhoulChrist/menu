@@ -1,16 +1,16 @@
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import DriftPage from "./components/DriftPage";
 import TimeAttackPage from "./components/TimeAttackPage";
 import ForzaPage from "./components/ForzaPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu";
+import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
+      <Menu />
       <div className="page">
-        <Menu />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="drift" element={<DriftPage />} />
